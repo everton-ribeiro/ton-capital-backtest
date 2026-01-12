@@ -1,5 +1,3 @@
-function test() {
-	console.log("123");
-}
+import { sum } from "./sum";
 
-test();
+console.log(sum(1, 2));
