@@ -1,27 +1,28 @@
-import { type UserConfig } from "@commitlint/types";
 
-export default {
-  // Use the conventional commit rules as a base.
+import type { UserConfig } from "@commitlint/types";
+import { RuleConfigSeverity } from "@commitlint/types";
+
+const typeEnum = [
+	"build",
+  "chore",
+  "ci",
+  "docs",
+  "feat",
+  "fix",
+  "perf",
+  "refactor",
+  "revert",
+  "style",
+  "test"
+];
+
+const Configuration: UserConfig = {
   extends: ["@commitlint/config-conventional"],
-  prompt: {
-    questions: {
-      type: {
-        enum: {
-          // Add a space to a few common types for better alignment.
-          build: {
-            emoji: "🛠️ ", // The extra space fixes the alignment.
-          },
-          chore: {
-            emoji: "♻️ ",
-          },
-          ci: {
-            emoji: "⚙️ ",
-          },
-          revert: {
-            emoji: "🗑️ ",
-          },
-        },
-      },
-    },
+  parserPreset: "conventional-changelog-atom",
+  formatter: "@commitlint/format",
+  rules: {
+    "type-enum": [RuleConfigSeverity.Error, "always", [...typeEnum]],
   },
-} satisfies UserConfig;
+};
+
+export default Configuration;
