@@ -7,9 +7,9 @@
     "dev": "tsx watch -r tsconfig-paths/register src/server.ts",
     "build": "tsup src",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-		"lint": "pnpm exec biome lint --write",
+    "lint": "pnpm exec biome lint --write",
     "lint:check": "pnpm exec biome check --write",
-		"lint:formate": "pnpm exec biome format --write"
+    "lint:formate": "pnpm exec biome format --write"
   },
   "keywords": [],
   "author": "Everton Ribeiro",
@@ -17,6 +17,10 @@
   "packageManager": "pnpm@10.18.1",
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
+    "@commitlint/cli": "20.3.1",
+    "@commitlint/config-conventional": "20.3.1",
+    "@evilmartians/lefthook": "2.0.14",
+    "lefthook": "2.0.14",
     "tsconfig-paths": "4.2.0",
     "tsup": "8.5.1",
     "tsx": "4.21.0",
