@@ -9,7 +9,10 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "pnpm exec biome lint --write",
     "lint:check": "pnpm exec biome check --write",
-    "lint:formate": "pnpm exec biome format --write"
+    "lint:formate": "pnpm exec biome format --write",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "Everton Ribeiro",
@@ -21,10 +24,13 @@
     "@commitlint/config-conventional": "20.3.1",
     "@commitlint/types": "20.3.1",
     "@evilmartians/lefthook": "2.0.14",
+    "@vitest/coverage-v8": "4.0.17",
+    "@vitest/ui": "4.0.17",
     "lefthook": "2.0.14",
     "tsconfig-paths": "4.2.0",
     "tsup": "8.5.1",
     "tsx": "4.21.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.0.17"
   }
 }
