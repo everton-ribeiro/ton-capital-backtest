@@ -10,7 +10,7 @@
     "lint": "pnpm exec biome lint --write",
     "lint:check": "pnpm exec biome check --write",
     "lint:formate": "pnpm exec biome format --write",
-    "test": "vitest",
+    "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui"
   },
